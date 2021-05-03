@@ -6,6 +6,6 @@ namespace todolist
 {
     class todoListWorker
     {
-       public List<ToDoListOBJ> newList = new List<ToDoListOBJ>();
+       public static List<ToDoListOBJ> newList = new List<ToDoListOBJ>();
     }
 }

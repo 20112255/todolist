@@ -30,47 +30,61 @@ namespace todolist
         private void InitializeComponent()
         {
             this.titleLabel = new System.Windows.Forms.Label();
-            this.lstbpxMain = new System.Windows.Forms.ListBox();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.lstboxMain = new System.Windows.Forms.ListBox();
+            this.addButton = new System.Windows.Forms.Button();
+            this.refreshButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.titleLabel.Location = new System.Drawing.Point(296, 23);
+            this.titleLabel.Location = new System.Drawing.Point(338, 31);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(189, 50);
+            this.titleLabel.Size = new System.Drawing.Size(239, 62);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "ToDo-List";
             // 
-            // lstbpxMain
+            // lstboxMain
             // 
-            this.lstbpxMain.FormattingEnabled = true;
-            this.lstbpxMain.ItemHeight = 15;
-            this.lstbpxMain.Location = new System.Drawing.Point(246, 224);
-            this.lstbpxMain.Name = "lstbpxMain";
-            this.lstbpxMain.Size = new System.Drawing.Size(320, 214);
-            this.lstbpxMain.TabIndex = 1;
+            this.lstboxMain.FormattingEnabled = true;
+            this.lstboxMain.ItemHeight = 20;
+            this.lstboxMain.Location = new System.Drawing.Point(281, 299);
+            this.lstboxMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lstboxMain.Name = "lstboxMain";
+            this.lstboxMain.Size = new System.Drawing.Size(365, 284);
+            this.lstboxMain.TabIndex = 1;
             // 
-            // btnAdd
+            // addButton
             // 
-            this.btnAdd.Location = new System.Drawing.Point(296, 137);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(189, 47);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Add to list";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.addButton.Location = new System.Drawing.Point(159, 162);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(239, 89);
+            this.addButton.TabIndex = 2;
+            this.addButton.Text = "Add ";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.Location = new System.Drawing.Point(490, 162);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(228, 89);
+            this.refreshButton.TabIndex = 3;
+            this.refreshButton.Text = "Refresh List";
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.lstbpxMain);
+            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.refreshButton);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.lstboxMain);
             this.Controls.Add(this.titleLabel);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -82,8 +96,9 @@ namespace todolist
         #endregion
 
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.ListBox lstbpxMain;
-        private System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.ListBox lstboxMain;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button refreshButton;
     }
 }
 
